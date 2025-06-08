@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Service History - Mink Traders</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <div id="signin">
+                <div class="logo">
+                    <img src="images/automative.jpg" alt="Mink Traders">
+                </div>
+                <h2 style="color:#f9d423;">Service History</h2>
+                <div style="background:rgba(30,30,30,0.85); padding:2rem 2.5rem; border-radius:10px; color:#fff; max-width:450px; margin:auto;">
+                    <form id="vinForm" style="margin-bottom:2rem;">
+                        <label for="vin" style="color:#f9d423; font-weight:600;">Enter VIN Number</label>
+                        <input type="text" id="vin" class="text-input" placeholder="e.g. 1HGCM82633A123456" style="margin-bottom:1rem;" required>
+                        <button type="submit" class="primary-btn" style="width:100%; margin-bottom:0;">Check VIN</button>
+                    </form>
+                    <table style="width:100%; border-collapse:collapse; color:#fff;">
+                        <thead>
+                            <tr style="background:#232526; color:#f9d423;">
+                                <th style="padding:0.7rem; border-bottom:2px solid #f9d423;">Date</th>
+                                <th style="padding:0.7rem; border-bottom:2px solid #f9d423;">Service</th>
+                                <th style="padding:0.7rem; border-bottom:2px solid #f9d423;">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444;">2025-05-10</td>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444;">Oil Change</td>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444; color:#f9d423;">Completed</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444;">2025-04-15</td>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444;">Brake Repair</td>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444; color:#f96816;">In Progress</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444;">2025-03-20</td>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444;">Tire Replacement</td>
+                                <td style="padding:0.6rem; border-bottom:1px solid #444; color:#f9d423;">Completed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="link" style="text-align:center; margin-top:2rem;">
+                    <a href="workshop-dashboard.html">Back to Dashboard</a>
+                </div>
+            </div>
+            <footer id="main-footer">
+                <p>Copyright &copy; 2025, Mink Traders All Rights Reserved</p>
+                <div>
+                    <a href="terms-of-use.html">terms of use</a> | <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </footer>
+        </div>
+        <div id="right">
+            <div id="showcase">
+                <div class="showcase-content">
+                    <h1 class="showcase-text">Your Service History</h1>
+                    <p>Review your past and current automotive services.<br>Stay on top of your car's maintenance with Mink Traders!</p>
+                    <img src="images/automative.jpg" alt="Workshop" style="width:60%; margin-top:2rem; border-radius:10px; border:3px solid #f9d423; box-shadow:0 0 20px #f9d42355;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    document.getElementById('vinForm').onsubmit = function(e) {
+        var vin = document.getElementById('vin').value.trim();
+        if (!vin) {
+            alert('Please enter a VIN number.');
+            e.preventDefault();
+            return false;
+        }
+        // In a real app, fetch and update the table based on VIN here
+        alert('Showing service history for VIN: ' + vin);
+        e.preventDefault();
+        return false;
+    };
+    </script>
+</body>
+</html>

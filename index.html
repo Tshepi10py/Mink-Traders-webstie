@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Sign In - Mink Traders</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <div id="signin">
+               <div class="logo">
+                <img src="images/automative.jpg" alt="Mink Traders">
+               </div> 
+            </div>
+            <form id="loginForm">
+                <div>
+                    <label>Email or username</label>
+                    <input type="text" class="text-input" id="username" required>
+                </div>
+                <div>
+                    <label>Password</label>
+                    <input type="password" class="text-input" id="password" required>
+                </div>
+                <button type="submit" class="primary-btn">Login</button>
+            </form>
+            <script>
+            document.getElementById('loginForm').onsubmit = function(e) {
+                var username = document.getElementById('username').value.trim();
+                var password = document.getElementById('password').value.trim();
+                if (!username || !password) {
+                    alert('Please enter both your email/username and password.');
+                    e.preventDefault();
+                    return false;
+                }
+                window.location.href = 'workshop-dashboard.html';
+                return false;
+            };
+            </script>
+            <div class="link">
+                <a href="forgot-password.html">Forgot Password</a>
+                <a href="company-signin.html">Sign in with company</a>
+                <div class="or">
+                    <hr class="bar">
+                    <span>OR</span>
+                    <hr class="bar">
+                </div>
+                <a href="company-signin.html" class="Secondary-btn">Sign In</a>
+            </div>
+            <footer id="main-footer">
+                <p>Copyright &copy; 2025, Mink Traders All Rights Reserved</p>
+                <div>
+                    <a href="terms-of-use.html">terms of use</a> | <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </footer>
+        </div>
+        <div id="right">
+            <div id="showcase">
+                <div class="showcase-content">
+                    <h1 class="showcase-text">Let us  fix your
+                        <strong>car</strong></h1>
+                        <a href="oil-change-discount.html" class="secondary">Click here for a Discount on oil change</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

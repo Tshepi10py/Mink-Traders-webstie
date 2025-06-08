@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Book a Service - Mink Traders</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="left">
+            <div id="signin">
+                <div class="logo">
+                    <img src="images/automative.jpg" alt="Mink Traders">
+                </div>
+                <h2 style="color:#f9d423;">Book a Service</h2>
+                <form style="background:rgba(30,30,30,0.85); padding:2rem 2.5rem; border-radius:10px; color:#fff; max-width:400px; margin:auto;">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" class="text-input" placeholder="Enter your name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="text-input" placeholder="you@example.com" required>
+                    </div>
+                    <div>
+                        <label for="service">Service Type</label>
+                        <select id="service" class="text-input" required>
+                            <option value="">Select a service</option>
+                            <option value="oil-change">Oil Change</option>
+                            <option value="brake-repair">Brake Repair</option>
+                            <option value="engine-diagnostics">Engine Diagnostics</option>
+                            <option value="tire-replacement">Tire Replacement</option>
+                            <option value="general-maintenance">General Maintenance</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" class="text-input" required>
+                    </div>
+                    <div>
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes" class="text-input" rows="3" placeholder="Describe any issues or requests..."></textarea>
+                    </div>
+                    <button type="submit" class="primary-btn" style="width:100%;">Book Service</button>
+                </form>
+                <div class="link" style="text-align:center; margin-top:2rem;">
+                    <a href="workshop-dashboard.html">Back to Dashboard</a>
+                </div>
+            </div>
+            <footer id="main-footer">
+                <p>Copyright &copy; 2025, Mink Traders All Rights Reserved</p>
+                <div>
+                    <a href="terms-of-use.html">terms of use</a> | <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+            </footer>
+        </div>
+        <div id="right">
+            <div id="showcase">
+                <div class="showcase-content">
+                    <h1 class="showcase-text">Book Your Service</h1>
+                    <p>Schedule your next automotive service with ease.<br>Our team will confirm your booking and get your car back on the road!</p>
+                    <img src="images/automative.jpg" alt="Workshop" style="width:60%; margin-top:2rem; border-radius:10px; border:3px solid #f9d423; box-shadow:0 0 20px #f9d42355;">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
